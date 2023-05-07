@@ -1,0 +1,36 @@
+.agent {
+    position: relative;
+    background-color: #414141b4;
+    background-image: url('../assets/img/agent_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    padding: 58px 0 75px;
+
+    h2 {
+        font-size: 26px;
+        line-height: 23px;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+
+    p {
+        font-size: 19px;
+        line-height: 27px;
+        font-weight: 300;
+        text-align: center;
+        max-width: 1025px;
+        margin: 22px 0 0;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blur {
+        backdrop-filter: blur(5px);
+    }
+}
+
