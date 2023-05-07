@@ -1,0 +1,19 @@
+@import './normalize';
+@import './fonts';
+@import './buttons';
+
+:root {
+    --main-color: #ec644b;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@import './promo';
