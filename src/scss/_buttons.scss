@@ -17,4 +17,20 @@
         line-height: 17px;
         font-weight: 700;
     }
+
+    &_small {
+        width: 160px;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    &_for-form {
+        width: 180px;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    &:hover {
+        background-color: #dc5238;
+    }
 }

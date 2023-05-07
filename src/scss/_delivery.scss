@@ -1,0 +1,90 @@
+.delivery {
+    padding: 53px 0 0;
+
+    &__img-container {
+        height: 78px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #2e2e2e;
+        margin: 0;
+        text-align: center;
+    }
+
+    &__subheader {
+        margin: 38px 0 0;
+        font-size: 21px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #2e2e2e;
+        text-align: center;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 267px);
+        grid-auto-rows: 357px;
+        list-style: none;
+        justify-content: center;
+        gap: 24px;
+        padding: 0;
+        margin: 31px 0 0;
+    }
+
+    &__item {
+        border: 1px solid #e9e9e9;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2) inset;
+        padding: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #2e2e2e;
+            margin: 0;
+            text-align: center;
+
+            &.delivery__descr {
+                text-transform: none;
+                line-height: 20px;
+                font-weight: 300;
+                margin: 12px 0 20px;
+                padding: 0 10px;
+            }
+
+            span {
+                font-size: 28px;
+                text-transform: none;
+                color: var(--main-color);
+            }
+        }
+
+        img {
+            width: min-content;
+        }
+
+        h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 61px;
+            width: 100%;
+            margin: 0;
+            background-color: #25333c;
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}

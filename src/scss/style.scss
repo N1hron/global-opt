@@ -18,7 +18,25 @@
     position: relative;
 }
 
+.line-after {
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 148px;
+        height: 1px;
+        background-color: var(--main-color);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
+    }
+}
+
 @import './promo';
 @import './benefits';
 @import './work';
 @import './agent';
+@import './delivery';
+@import './consult-form';
