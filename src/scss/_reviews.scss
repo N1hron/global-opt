@@ -114,3 +114,41 @@
         }
     }
 }
+
+
+
+@keyframes animation-backward {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.6) translateX(-107.5%);
+        position: relative;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(0%);
+        position: relative;
+    }
+}
+
+@keyframes animation-forward {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.6) translateX(107.5%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(0%);
+    }
+}
+
+.slide-change-forward {
+    animation-name: 'animation-forward';
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+.slide-change-backward {
+    animation-name: 'animation-backward';
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}

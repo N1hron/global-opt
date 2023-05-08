@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Global Opt</title>
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
@@ -15,12 +15,12 @@
                     <img src="./assets/img/logo.png" alt="Global Opt" class="promo__logo">
                     <nav class="promo__navigation">
                         <ul>
-                            <li class="promo__navigation-item"><a href="#">Преимущества</a></li>
-                            <li class="promo__navigation-item"><a href="#">Наша работа</a></li>
-                            <li class="promo__navigation-item"><a href="#">Цены</a></li>
-                            <li class="promo__navigation-item"><a href="#">Схема работы</a></li>
-                            <li class="promo__navigation-item"><a href="#">Отзывы</a></li>
-                            <li class="promo__navigation-item"><a href="#">Контакты</a></li>
+                            <li class="promo__navigation-item"><a href="#benefits">Преимущества</a></li>
+                            <li class="promo__navigation-item"><a href="#our-work">Наша работа</a></li>
+                            <li class="promo__navigation-item"><a href="#prices">Цены</a></li>
+                            <li class="promo__navigation-item"><a href="#scheme">Схема работы</a></li>
+                            <li class="promo__navigation-item"><a href="#reviews">Отзывы</a></li>
+                            <li class="promo__navigation-item"><a href="#contacts">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="promo__contact">
@@ -69,7 +69,7 @@
             </div>
             <div class="blur"></div>
         </section>
-        <section class="benefits">
+        <section id="benefits" class="benefits">
             <div class="container">
                 <h2>Преимущества работы с GlobalOpt</h2>
                 <ul class="benefits__items">
@@ -132,7 +132,7 @@
                 </ul>
             </div>
         </section>
-        <section class="work">
+        <section id="our-work" class="work">
             <div class="container">
                 <h2>Наша работа - больше чем просто доставка</h2>
                 <p class="work__subheader">Мы организуем перевозки из Китая - оперативно и надежно, с учетом особенностей груза и ваших требований по срокам и бюджету.</p>
@@ -169,7 +169,7 @@
             </div>
             <div class="blur"></div>
         </section>
-        <section class="delivery">
+        <section id="prices" class="delivery">
             <div class="container">
                 <h2 class="line-after">Цены на любой вариант доставки</h2>
                 <p class="delivery__subheader">Перевозки грузов на дальние расстояния без каких-либо ограничений.<br>Любой груз доставим вовремя.</p>
@@ -249,7 +249,7 @@
             </div>
             <div class="blur"></div>
         </section>
-        <section class="scheme">
+        <section id="scheme" class="scheme">
             <div class="container">
                 <h2>Схема работы с нами</h2>
                 <ul class="scheme__items">
@@ -305,7 +305,7 @@
                 </ul>
             </div>
         </section>
-        <section class="reviews">
+        <section id="reviews" class="reviews">
             <h2 class="line-after">Отзывы наших клиентов</h2>
             <p class="reviews__subheader">Мы всегда стараемся помочь клиентам, что бы они обращались к нам снова</p>
             <div class="reviews__slider">
@@ -330,7 +330,7 @@
                 </ul>
             </div>
         </section>
-        <section class="question-form">
+        <section id="contacts" class="question-form">
             <form>
                 <div class="question-form__header">
                     <h2>Остались вопросы?</h2>
@@ -345,6 +345,32 @@
                 <button class="button button_for-form">Отправить заявку</button>
             </form>
         </section>
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.607936237027!2d37.62529753637392!3d55.74794081884779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54af8f4b2bb81%3A0x1667827ac72a29c7!2sGlobal%20Opt!5e0!3m2!1sru!2sru!4v1683566461974!5m2!1sru!2sru" width="600" height="500" style="border: none; width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__main">
+                    <img src="./assets/img/logo.png" alt="GlobalOpt">
+                    <p>Global Opt - Доставка грузов из Китая в Россию и СНГ</p>
+                    <div class="footer__contact">
+                        <div class="footer__contact-text">
+                            <p>Есть вопросы?</p>
+                            <a href="tel:+79264230100">+7 (926) 423 01 00</a>
+                        </div>
+                        <a href="tel:+79264230100" class="button">Перезвоните мне</a>
+                    </div>
+                </div>
+                <div class="footer__secondary">
+                    <p>&copy; 2010 Scratch.com.ua</p>
+                    <a href="#">Политика конфидециальности</a>
+                    <div class="footer__creator">
+                        <p>Создание сайта:</p>
+                        <img src="./assets/img/creator_logo.png" alt="duh">
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
     <script type="module" src="./index.js"></script>
 </body>

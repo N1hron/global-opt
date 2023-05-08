@@ -9,6 +9,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -34,6 +35,10 @@
     }
 }
 
+.google-map {
+    line-height: 0;
+}
+
 @import './promo';
 @import './benefits';
 @import './work';
@@ -43,3 +48,4 @@
 @import './scheme';
 @import './reviews';
 @import './questions-form';
+@import './footer';
