@@ -1,0 +1,116 @@
+.reviews {
+    text-align: center;
+    padding: 51px 0 65px;
+    
+    h2 {
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #2e2e2e;
+    }
+
+    &__subheader {
+        font-size: 21px;
+        font-weight: 300;
+        color: #2e2e2e;
+        margin-top: 32px;
+    }
+
+    &__slide {
+        max-width: 605px;
+        opacity: 0.3;
+        text-align: justify;
+        text-align-last: center;
+        transform: scale(0.6);
+        line-height: 22px;
+
+        &:nth-child(1) {
+            transform: scale(0.6) translateX(34%);
+        }
+
+        &:nth-last-child(1) {
+            transform: scale(0.6) translateX(-34%);
+        }
+        
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #3a3a3a;
+            margin: 10px 0 0;
+        }
+
+        p {
+            font-size: 14.1px;
+            font-weight: 300;
+            color: #3a3a3a;
+            margin: 7px 0 0;
+        }
+
+        img {
+            width: 114px;
+            height: 114px;
+        }
+
+        &.active {
+            opacity: 1;
+            transform: scale(1);
+            margin: 0;
+        }
+    }
+
+    &__slides {
+        display: flex;
+        margin-top: 31px;
+        column-gap: 45px;
+        justify-content: center;
+        padding: 0;
+    }
+
+    &__slider {
+        .right, .left {
+            position: absolute;
+            width: 14px;
+            height: 46px;
+            display: block;
+            left: 50%;
+            z-index: 1;
+            cursor: pointer;
+
+            div {
+                position: relative;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 27px;
+                height: 1px;
+                background-color: var(--main-color);
+                transform: rotate(-60deg);
+                top: 11px;
+                left: -7px;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 26.9px;
+                height: 1px;
+                background-color: var(--main-color);
+                transform: rotate(60deg);
+                bottom: 11px;
+                left: -7px;
+            }
+        }   
+
+        .left {
+            transform: translate(-110px, 34px);
+        }
+
+        .right {
+            transform: translate(96px, 34px) scaleX(-1);
+        }
+    }
+}
