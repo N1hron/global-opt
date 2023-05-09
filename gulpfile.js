@@ -1,10 +1,12 @@
-const {src, dest, watch, parallel} = require('gulp'),
+const {src, dest, watch, parallel, series} = require('gulp'),
       scss = require('gulp-sass')(require('sass')),
       rename = require('gulp-rename'),
       browserSync = require('browser-sync').create(),
       autoprefixer = require('gulp-autoprefixer'),
       sourcemaps = require('gulp-sourcemaps'),
-      webpack = require('webpack-stream');
+      webpack = require('webpack-stream'),
+      del = require('del'),
+      imagemin = require('gulp-imagemin');
 
 function styles() {
     return src('src/scss/style.scss')
@@ -53,6 +55,28 @@ function watchFiles() {
     watch(['src/assets/**.*.*']).on('change', browserSync.reload);
 }
 
+function moveResources() {
+  return src([
+      'src/css/style.min.css',
+      'src/*.html',
+      'src/*.js',
+      'src/*.js.*',
+      'src/assets/fonts/*',
+      'src/assets/favicons/*'
+    ], {base: 'src'})
+    .pipe(dest('dist'))
+}
+
+function minifyAndMoveImages() {
+  return src('src/assets/img/*', {base: 'src'})
+    .pipe(imagemin())
+    .pipe(dest('dist')) 
+}
+
+function clearDist() {
+  return del('dist');
+}
+
 function browsersync() {
     browserSync.init({
         server: {
@@ -65,5 +89,9 @@ exports.styles = styles;
 exports.js = js;
 exports.watchFiles = watchFiles;
 exports.browsersync = browsersync;
+exports.moveResources = moveResources;
+exports.clearDist = clearDist;
+exports.minifyAndMoveImages = minifyAndMoveImages;
 
 exports.default = parallel(styles, js, browsersync, watchFiles);
+exports.build = series(clearDist, moveResources, minifyAndMoveImages);
